@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Bauen Web Dev-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberty Center Chapel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h2><a href="#"><img alt="" src=""></a></h2>
+		<ul class="nav">
+			<li>
+				<a href="index.html">Home</a>
+			</li>
+			<li>
+				<a href="about us.html">About Us</a>
+			</li>
+			<li>
+				<a href="services.html">Services</a>
+			</li>
+			<li>
+				<a href="contact.html">Contact</a>
+			</li>
+		</ul>
+    </header>
+    <section>
+        <div class="hero">
+            <video autoplay loop plays-line id="backVideo"><source src="video/lccvi_compressed.mp4" type="video/mp4"></video>
+            <div class="sidebar">
+                <h1>Liberty Center Chapel</h1>
+                <h3>Houston, Tx USA.</h3>
+                <p>Mission Statement: Mountain of Prayer and Praise International Ministries (MOPP) is established to reach out to the lost, proclaim freedom to those in bondage, break every yoke, release people from their burdens, restore broken marriages, rekindle and reignite the believer's fire and above all save souls. </p>
+                <a href="#">Come Worship With Us</a>
+            </div>
+            <img src="play/play.png" id="btn">
+    
+    
+        </div>
+    </section>
+    <script>
+        let backVideo = document.getElementById("backVideo");
+        let btn = document.getElementById("btn");
+        btn.onclick = function(){
+            backVideo.style.display = "block";
+            if(backVideo.paused){
+                backVideo.play();
+                btn.src = "play/play.png";
+            }
+            else{
+                backVideo.pause();
+                btn.src="pause/pause.png";
+            }
+        }
+    </script>
+</body>
+</html>
